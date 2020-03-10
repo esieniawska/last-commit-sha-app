@@ -5,7 +5,6 @@ namespace src\Api;
 use Console\Api\Response\GitLastCommitSha;
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
-use src\Api\Exceptions\ApiException;
 
 abstract class AbstractGitLastCommitShaFetcher implements GitLastCommitShaFetcherInterface
 {
@@ -36,14 +35,12 @@ abstract class AbstractGitLastCommitShaFetcher implements GitLastCommitShaFetche
     /**
      * @param string $url
      * @return ResponseInterface
-     * @throws ApiException
      */
     abstract protected function makeGetRequest(string $url): ResponseInterface;
 
     /**
      * @param string $response
      * @return GitLastCommitSha
-     * @throws ApiException
      */
     abstract protected function decodeResponse(string $response): GitLastCommitSha;
 }

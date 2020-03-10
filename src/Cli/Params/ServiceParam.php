@@ -3,7 +3,6 @@
 namespace src\Cli\Params;
 
 use src\Cli\Errors\InvalidServiceException;
-use src\Cli\Validators\OptionValidator;
 
 class ServiceParam extends Param
 {
@@ -19,9 +18,9 @@ class ServiceParam extends Param
     public function __construct(string $name, array $allowedOptions, string $defaultValue)
     {
         parent::__construct($name);
+
         $this->allowedOptions = $allowedOptions;
         $this->defaultValue = $defaultValue;
-        $this->setValidator(new OptionValidator($this->name));
     }
 
     /**

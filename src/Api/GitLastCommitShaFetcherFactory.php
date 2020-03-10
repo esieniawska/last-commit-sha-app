@@ -4,14 +4,13 @@ namespace src\Api;
 
 use GuzzleHttp\Client;
 use src\Api\Exceptions\ApiException;
-use src\Cli\Errors\InvalidParamException;
 
 class GitLastCommitShaFetcherFactory
 {
     private Client $client;
 
     /**
-     * GitLastCommitShaFetcher constructor.
+     * GitLastCommitShaFetcherFactory constructor.
      * @param Client $client
      */
     public function __construct(Client $client)

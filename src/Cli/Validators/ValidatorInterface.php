@@ -5,8 +5,8 @@ namespace src\Cli\Validators;
 interface ValidatorInterface
 {
     /**
-     * @param $value
+     * @param string $value
      * @return bool
      */
-    public function isValid($value): bool;
+    public function isValid(string $value): bool;
 }

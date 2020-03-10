@@ -3,10 +3,8 @@
 namespace src\Cli;
 
 use src\Cli\Errors\InvalidParamException;
-use src\Cli\Params\BranchParam;
 use src\Cli\Params\CliParam;
 use src\Cli\Params\ServiceParam;
-use src\Cli\Params\OwnerRepoParam;
 use src\Cli\Params\Param;
 use src\Cli\Validators\OptionValidator;
 use src\Cli\Validators\RegularExpressionValidator;
